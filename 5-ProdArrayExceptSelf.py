@@ -4,9 +4,9 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:  
         n=len(nums)
-        leftP=  [1]*n 
-        rightP= [1]*n
-        
+        leftP =  [1]*n 
+        rightP = [1]*n
+        ans = [1]*n
        
         for i in range(1, n):               #leftProduct array
             leftP[i] = leftP[i-1] * nums[i-1]
@@ -17,8 +17,8 @@ class Solution:
             
         # ans array by multiplying left and right arrays at each index
         for i in range(n):
-            nums[i] = leftP[i]  *  rightP[i]
+            ans[i] = leftP[i]  *  rightP[i]
             
-        return nums     
+        return ans     
     
      
