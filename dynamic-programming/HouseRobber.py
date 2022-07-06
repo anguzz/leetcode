@@ -1,5 +1,5 @@
 class Solution:       
-    def rob2(self, nums: List[int]) -> int:
+    def rob(self, nums: List[int]) -> int:
         last, curr = 0, 0
         for i in nums:
             last, curr = curr, max(last + i, curr)
