@@ -10,7 +10,7 @@ class Solution:
         
         
         def dfs(x, y):
-			## adding the row and column number to the visited set
+	## adding the row and column number to the visited set
             visited.add((x,y))
             for dx, dy in d:  
                 xpos = x + dx  #update x and y
@@ -21,14 +21,14 @@ class Solution:
                     grid[xpos][ypos] == '0' or
                     (xpos, ypos) in visited):
                     continue
-				## if all the conditions are met, function is called recursively
+	## if all the conditions are met, function is called recursively
                 dfs(xpos, ypos)
                 
         for x in range(xlen):
             for y in range(ylen):
                 if grid[x][y] == '1' and (x,y) not in visited:
                     dfs(x, y)
-					## when dfs completes, island has been found
-					## so increase the answer
+		## when dfs completes, island has been found
+		## so increase the answer
                     ans += 1
         return ans
