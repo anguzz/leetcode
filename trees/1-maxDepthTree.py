@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
+#Given the root of a binary tree, return its maximum depth.
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:        #base case
