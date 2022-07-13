@@ -11,3 +11,14 @@ class Solution:
             rob[i] = max(rob[i-2] + nums[i-1], rob[i-1])
         # Return the larget amount of money stolen from the results
         return rob[len(nums)]
+     
+     
+     #alternative solution
+     def rob(self, nums: List[int]) -> int: #very similar to climb steps, but get the max here
+        prev= prevPrev=0
+        
+        for n in nums:
+            temp=max(n+prev, prevPrev)
+            prev= prevPrev
+            prevPrev = temp
+        return temp
