@@ -1,5 +1,5 @@
 class Solution:       
-     def rob2(self, nums: List[int]) -> int:  
+     def rob(self, nums: List[int]) -> int:  
         #create arr
         rob = [0] * (len(nums) + 1)  
         # Base case: 0 rooms and 1 room
