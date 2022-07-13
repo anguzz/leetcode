@@ -1,13 +1,5 @@
 class Solution:       
-    def rob(self, nums: List[int]) -> int:
-        last, curr = 0, 0
-        for i in nums:
-            last, curr = curr, max(last + i, curr)
-        return curr
-      
-       
-    
-     def rob2(self, nums: List[int]) -> int:  #another approach
+     def rob2(self, nums: List[int]) -> int:  
         #create arr
         rob = [0] * (len(nums) + 1)  
         # Base case: 0 rooms and 1 room
