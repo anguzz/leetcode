@@ -4,7 +4,7 @@ class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         res = maxP = minP = nums[0]
         for n in nums[1:]:  
-            maxP, minP = max(n, maxP*n, minP*n), min(n, maxP*n, minP*n) #imporant this happens in single line so maxP/minP are not yet affected in max/min function
+            maxP, minP = max(n, maxP*n, minP*n), min(n, maxP*n, minP*n) #imporant this happens in single line assigment so maxP/minP are not yet affected in max/min function
             res = max(res, maxP)
         return res
         
